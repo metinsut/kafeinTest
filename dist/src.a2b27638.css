@@ -1,0 +1,385 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+/* Remove default margin */
+body {
+  margin: 0;
+  font-family: "roboto-regular", "Open Sans", sans-serif;
+  background-color: var(--black);
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  font-family: "roboto-regular", "Open Sans", sans-serif;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+*:focus {
+  outline: none;
+}
+@font-face {
+  font-family: "roboto-light";
+  src: url("/Roboto-Light.713628b0.woff2");
+}
+@font-face {
+  font-family: "roboto-regular";
+  src: url("/Roboto-Regular.aa86adca.woff2");
+}
+@font-face {
+  font-family: "roboto-medium";
+  src: url("/Roboto-Light.713628b0.woff2");
+}
+:root {
+  --greyish: #afafaf;
+  --dark-grey: #1e1e1e;
+  --black: #000000;
+  --grey-medium: #666666;
+  --white: #ffffff;
+  --black-three: #292929;
+  --golden-rod: #f1cb15;
+  --dark: #253342;
+  --grey-dark: #1e1e1e;
+  --dark-lime-green: #76b900;
+  --input-placeholder: #8e9fad;
+  --green: #76b900;
+}
+header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-content: center;
+  align-items: center;
+  height: 80px;
+  padding: 1rem 8rem;
+  background-color: var(--white);
+}
+
+.header__logo {
+  padding: 0.3rem;
+  cursor: pointer;
+}
+.header__logo img {
+  object-fit: cover;
+  width: 317px;
+  height: auto;
+}
+
+.header__list {
+  list-style: none;
+  display: grid;
+  grid-auto-flow: column;
+  padding: 0 2rem;
+}
+.header__list a {
+  font-size: 1.6rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.header__list--active {
+  color: var(--dark-lime-green);
+}
+
+.header__button {
+  cursor: pointer;
+  width: 185px;
+  height: 40px;
+  border: none;
+  background-color: var(--dark-lime-green);
+  color: var(--white);
+  font-size: 1.6rem;
+}
+.search-banner {
+  height: 400px;
+  width: 100vw;
+  display: grid;
+}
+
+.search-banner__video {
+  position: absolute;
+  object-fit: cover;
+  height: 400px;
+  width: 100vw;
+}
+
+.search-banner__body {
+  z-index: 2;
+  width: 793px;
+  display: grid;
+  grid-gap: 1.5rem;
+  grid-auto-flow: row;
+  align-self: center;
+  justify-self: center;
+}
+
+.search-banner__title {
+  font-family: "roboto-medium";
+  font-size: 4rem;
+  color: var(--white);
+  text-align: center;
+}
+
+.search-banner__description {
+  font-size: 2rem;
+  color: var(--white);
+  text-align: center;
+}
+
+.search-banner__wrapper {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  margin: 4rem 0 0 0;
+  height: 56px;
+  width: 100%;
+}
+
+.search-banner__searc-icon {
+  width: 56px;
+  height: 56px;
+  background-color: var(--white);
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  color: var(--dark-grey);
+}
+.search-banner__searc-icon .icon-search {
+  fill: var(--dark-grey);
+}
+
+.search-banner__input {
+  height: 56px;
+  width: 100%;
+  border: none;
+  font-size: 2rem;
+  color: var(--input-placeholder);
+  vertical-align: middle;
+}
+
+.search-banner__clear-icon {
+  width: 56px;
+  height: 56px;
+  background-color: var(--white);
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  color: var(--dark-grey);
+}
+.search-banner__clear-icon .icon-clear {
+  fill: var(--dark-grey);
+}
+.main-layout__wrapper {
+  display: grid;
+  grid-template-columns: 386px 1fr;
+  padding: 5rem 12rem;
+  grid-gap: 2rem;
+}
+
+.game-filter {
+  display: grid;
+  align-content: flex-start;
+  grid-auto-flow: row;
+}
+
+.game-filter__title-block {
+  height: 8rem;
+  display: grid;
+  align-content: center;
+}
+
+.game-filter__title-text {
+  font-size: 2.8rem;
+  font-family: "roboto-medium";
+  color: var(--white);
+}
+
+.game-filter__main-block {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-gap: 2rem;
+  align-items: center;
+  background-color: var(--dark-grey);
+  padding: 3rem;
+}
+.game-filter__main-block .icon-down {
+  fill: #979797;
+}
+
+.game-filter__filter-title {
+  font-size: 2.4rem;
+  color: var(--greyish);
+}
+
+.game-filter__checkbox-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
+}
+
+.game-filter__checkbox-item {
+  display: block;
+  position: relative;
+  padding-left: 50px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  user-select: none;
+}
+
+.game-filter__checkbox-item input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.game-filter__checkbox-checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+.game-filter__checkbox-item:hover input ~ .game-filter__checkbox-checkmark {
+  background-color: #ccc;
+}
+
+.game-filter__checkbox-item input:checked ~ .game-filter__checkbox-checkmark {
+  background-color: var(--green);
+}
+
+.game-filter__checkbox-checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.game-filter__checkbox-item input:checked ~ .game-filter__checkbox-checkmark:after {
+  display: block;
+}
+
+.game-filter__checkbox-item .game-filter__checkbox-checkmark:after {
+  left: 9px;
+  top: 4px;
+  width: 7px;
+  height: 14px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.game-filter__checkbox-text {
+  font-size: 2rem;
+  color: var(--greyish);
+}
+
+.game-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-content: flex-start;
+}
+
+.game-list__selectbox-block {
+  height: 8rem;
+  justify-self: flex-end;
+}
+
+.game-list__selectbox-item {
+  background-color: var(--dark-grey);
+  width: 151px;
+  height: 56px;
+  font-size: 2rem;
+  font-family: "roboto-medium";
+  color: var(--greyish);
+  padding: 1rem;
+  border: none;
+}
+
+.game-list__selectbox-item option {
+  font-size: 2rem;
+  font-family: "roboto-medium";
+  color: var(--greyish);
+  padding: 1rem;
+  border: none;
+}
+
+.game-card {
+  background-color: var(--dark-grey);
+  padding: 3rem;
+}
+
+.game-card__card-icon {
+  width: 6rem;
+  height: 6rem;
+  display: grid;
+  position: relative;
+  align-items: center;
+  justify-items: center;
+}
+
+.game-card__card-word {
+  position: absolute;
+  font-size: 3rem;
+  color: var(--dark-grey);
+  font-family: "roboto-medium";
+  font-weight: bold;
+}
+
+.game-card__card-detail {
+  font-size: 1.6rem;
+  color: var(--greyish);
+  padding: 2.5rem 0 0 0;
+}
+
+/*# sourceMappingURL=/src.a2b27638.css.map */

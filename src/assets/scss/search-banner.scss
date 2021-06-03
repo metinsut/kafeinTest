@@ -1,0 +1,81 @@
+.search-banner {
+  height: 400px;
+  width: 100vw;
+  display: grid;
+}
+
+.search-banner__video {
+  position: absolute;
+  object-fit: cover;
+  height: 400px;
+  width: 100vw;
+}
+
+.search-banner__body {
+  z-index: 2;
+  width: 793px;
+  display: grid;
+  grid-gap: 1.5rem;
+  grid-auto-flow: row;
+  align-self: center;
+  justify-self: center;
+}
+
+.search-banner__title {
+  font-family: "roboto-medium";
+  font-size: 4rem;
+  color: var(--white);
+  text-align: center;
+}
+
+.search-banner__description {
+  font-size: 2rem;
+  color: var(--white);
+  text-align: center;
+}
+
+.search-banner__wrapper {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  margin: 4rem 0 0 0;
+  height: 56px;
+  width: 100%;
+}
+
+.search-banner__searc-icon {
+  width: 56px;
+  height: 56px;
+  background-color: var(--white);
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  color: var(--dark-grey);
+  .icon-search {
+    fill: var(--dark-grey);
+  }
+}
+
+.search-banner__input {
+  height: 56px;
+  width: 100%;
+  border: none;
+  font-size: 2rem;
+  color: var(--input-placeholder);
+  vertical-align: middle;
+}
+
+.search-banner__clear-icon {
+  width: 56px;
+  height: 56px;
+  background-color: var(--white);
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  color: var(--dark-grey);
+  .icon-clear {
+    fill: var(--dark-grey);
+  }
+}
+
+.search-anner__result {
+}

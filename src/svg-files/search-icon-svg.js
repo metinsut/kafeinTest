@@ -1,0 +1,26 @@
+import React from "react";
+
+const IconSearch = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="22"
+      height="22"
+      viewBox="0 0 22 22"
+    >
+      <g fill="none" fillRule="evenodd">
+        <g fill="#1E1E1E" fillRule="nonzero">
+          <g>
+            <path
+              className="icon-search"
+              d="M26 17c4.97 0 9 4.03 9 9 0 2.125-.736 4.077-1.967 5.617l5.674 5.676c.39.39.39 1.024 0 1.414-.36.36-.927.388-1.32.083l-.094-.083-5.676-5.675C30.077 34.264 28.125 35 26 35c-4.97 0-9-4.03-9-9s4.03-9 9-9zm0 2c-3.865 0-7 3.134-7 7s3.135 7 7 7c3.866 0 7-3.134 7-7s-3.134-7-7-7z"
+              transform="translate(-341 -351) translate(0 80) translate(324 254)"
+            />
+          </g>
+        </g>
+      </g>
+    </svg>
+  );
+};
+
+export default IconSearch;

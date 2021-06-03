@@ -1,0 +1,167 @@
+.main-layout__wrapper {
+  display: grid;
+  grid-template-columns: 386px 1fr;
+  padding: 5rem 12rem;
+  grid-gap: 2rem;
+}
+
+.game-filter {
+  display: grid;
+  align-content: flex-start;
+  grid-auto-flow: row;
+}
+
+.game-filter__title-block {
+  height: 8rem;
+  display: grid;
+  align-content: center;
+}
+
+.game-filter__title-text {
+  font-size: 2.8rem;
+  font-family: "roboto-medium";
+  color: var(--white);
+}
+
+.game-filter__main-block {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-gap: 2rem;
+  align-items: center;
+  background-color: var(--dark-grey);
+  padding: 3rem;
+  .icon-down {
+    fill: #979797;
+  }
+}
+
+.game-filter__filter-title {
+  font-size: 2.4rem;
+  color: var(--greyish);
+}
+
+.game-filter__checkbox-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
+}
+
+.game-filter__checkbox-item {
+  display: block;
+  position: relative;
+  padding-left: 50px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  user-select: none;
+}
+
+.game-filter__checkbox-item input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.game-filter__checkbox-checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+.game-filter__checkbox-item:hover input ~ .game-filter__checkbox-checkmark {
+  background-color: #ccc;
+}
+
+.game-filter__checkbox-item input:checked ~ .game-filter__checkbox-checkmark {
+  background-color: var(--green);
+}
+
+.game-filter__checkbox-checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.game-filter__checkbox-item
+  input:checked
+  ~ .game-filter__checkbox-checkmark:after {
+  display: block;
+}
+
+.game-filter__checkbox-item .game-filter__checkbox-checkmark:after {
+  left: 9px;
+  top: 4px;
+  width: 7px;
+  height: 14px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.game-filter__checkbox-text {
+  font-size: 2rem;
+  color: var(--greyish);
+}
+
+.game-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-content: flex-start;
+}
+
+.game-list__selectbox-block {
+  height: 8rem;
+  justify-self: flex-end;
+}
+
+.game-list__selectbox-item {
+  background-color: var(--dark-grey);
+  width: 151px;
+  height: 56px;
+  font-size: 2rem;
+  font-family: "roboto-medium";
+  color: var(--greyish);
+  padding: 1rem;
+  border: none;
+}
+
+.game-list__selectbox-item option {
+  font-size: 2rem;
+  font-family: "roboto-medium";
+  color: var(--greyish);
+  padding: 1rem;
+  border: none;
+}
+
+.game-card {
+  background-color: var(--dark-grey);
+  padding: 3rem;
+}
+
+.game-card__card-icon {
+  width: 6rem;
+  height: 6rem;
+  display: grid;
+  position: relative;
+  align-items: center;
+  justify-items: center;
+}
+
+.game-card__card-word {
+  position: absolute;
+  font-size: 3rem;
+  color: var(--dark-grey);
+  font-family: "roboto-medium";
+  font-weight: bold;
+}
+
+.game-card__card-detail {
+  font-size: 1.6rem;
+  color: var(--greyish);
+  padding: 2.5rem 0 0 0;
+}
