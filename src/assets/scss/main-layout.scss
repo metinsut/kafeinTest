@@ -25,7 +25,7 @@
 
 .game-filter__main-block {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 1fr;
   grid-gap: 2rem;
   align-items: center;
   background-color: var(--dark-grey);
@@ -141,6 +141,7 @@
 .game-card {
   background-color: var(--dark-grey);
   padding: 3rem;
+  margin-bottom: 3rem;
 }
 
 .game-card__card-icon {
@@ -160,8 +161,18 @@
   font-weight: bold;
 }
 
-.game-card__card-detail {
+.game-card__card-gameList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1.6rem;
+  padding: 3rem 0 0 0;
+}
+
+.game-card__card-gameName {
   font-size: 1.6rem;
   color: var(--greyish);
-  padding: 2.5rem 0 0 0;
+  cursor: pointer;
+  &:hover {
+    color: var(--white);
+  }
 }

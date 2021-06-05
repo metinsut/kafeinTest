@@ -1,13 +1,15 @@
 import React from "react";
-import video from "../../assets/videos/geforce-now-overview-hero-banner-xl.mp4";
+import searchBackGroundImage from "../../assets/images/search-bg/search-bg.png";
 import SearchInput from "./search-input";
 
 const SearchBanner = () => {
   return (
     <div className="search-banner">
-      <video className="search-banner__video" src={video} autoPlay loop>
-        <source data-src={video} type="video/mp4" src={video} />
-      </video>
+      <img
+        className="search-banner__image"
+        src={searchBackGroundImage}
+        alt="search-bg"
+      />
       <div className="search-banner__body">
         <h1 className="search-banner__title">
           Lorem ipsum dolor sit amet consectetur

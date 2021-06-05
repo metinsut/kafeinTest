@@ -11,6 +11,8 @@ body {
   margin: 0;
   font-family: "roboto-regular", "Open Sans", sans-serif;
   background-color: var(--black);
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 h1,

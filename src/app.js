@@ -3,13 +3,13 @@ import { useDispatch } from "react-redux";
 import Header from "./components/header";
 import SearchBanner from "./components/search-banner/search-banner";
 import MainLayout from "./components/main-layout/main-layout";
-import { fetchGamesAndGenres } from "./store/games-reducer";
+import { setGamesAndGenres } from "./store/games-reducer";
 import gamesAndGenres from "./json/games.json";
 
 const App = () => {
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(fetchGamesAndGenres(gamesAndGenres));
+    dispatch(setGamesAndGenres(gamesAndGenres));
   }, []);
   return (
     <>

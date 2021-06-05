@@ -33161,8 +33161,8 @@ var Header = function Header() {
 
 var _default = Header;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","../assets/images/logo/logo.png":"src/assets/images/logo/logo.png","../assets/images/logo/logo@2x.png":"src/assets/images/logo/logo@2x.png","../assets/images/logo/logo@3x.png":"src/assets/images/logo/logo@3x.png"}],"src/assets/videos/geforce-now-overview-hero-banner-xl.mp4":[function(require,module,exports) {
-module.exports = "/geforce-now-overview-hero-banner-xl.6212f949.mp4";
+},{"react":"node_modules/react/index.js","../assets/images/logo/logo.png":"src/assets/images/logo/logo.png","../assets/images/logo/logo@2x.png":"src/assets/images/logo/logo@2x.png","../assets/images/logo/logo@3x.png":"src/assets/images/logo/logo@3x.png"}],"src/assets/images/search-bg/search-bg.png":[function(require,module,exports) {
+module.exports = "/search-bg.25773ca2.png";
 },{}],"src/svg-files/search-icon-svg.js":[function(require,module,exports) {
 "use strict";
 
@@ -33273,7 +33273,7 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _geforceNowOverviewHeroBannerXl = _interopRequireDefault(require("../../assets/videos/geforce-now-overview-hero-banner-xl.mp4"));
+var _searchBg = _interopRequireDefault(require("../../assets/images/search-bg/search-bg.png"));
 
 var _searchInput = _interopRequireDefault(require("./search-input"));
 
@@ -33282,16 +33282,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var SearchBanner = function SearchBanner() {
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "search-banner"
-  }, /*#__PURE__*/_react.default.createElement("video", {
-    className: "search-banner__video",
-    src: _geforceNowOverviewHeroBannerXl.default,
-    autoPlay: true,
-    loop: true
-  }, /*#__PURE__*/_react.default.createElement("source", {
-    "data-src": _geforceNowOverviewHeroBannerXl.default,
-    type: "video/mp4",
-    src: _geforceNowOverviewHeroBannerXl.default
-  })), /*#__PURE__*/_react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("img", {
+    className: "search-banner__image",
+    src: _searchBg.default,
+    alt: "search-bg"
+  }), /*#__PURE__*/_react.default.createElement("div", {
     className: "search-banner__body"
   }, /*#__PURE__*/_react.default.createElement("h1", {
     className: "search-banner__title"
@@ -33302,7 +33297,7 @@ var SearchBanner = function SearchBanner() {
 
 var _default = SearchBanner;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","../../assets/videos/geforce-now-overview-hero-banner-xl.mp4":"src/assets/videos/geforce-now-overview-hero-banner-xl.mp4","./search-input":"src/components/search-banner/search-input.js"}],"src/assets/images/arrow/icon-mask.png":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../../assets/images/search-bg/search-bg.png":"src/assets/images/search-bg/search-bg.png","./search-input":"src/components/search-banner/search-input.js"}],"src/assets/images/arrow/icon-mask.png":[function(require,module,exports) {
 module.exports = "/icon-mask.87133543.png";
 },{}],"src/svg-files/down-icon-svg.js":[function(require,module,exports) {
 "use strict";
@@ -37423,35 +37418,167 @@ function isAsyncThunkAction() {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.getGenres = exports.fetchGamesAndGenres = exports.gamesSlice = void 0;
+exports.default = exports.getGamesBySortedAndFilteredSelector = exports.getGamesSelector = exports.getGenresSelector = exports.addFilterTypes = exports.toggleSortType = exports.setGamesAndGenres = exports.gamesSlice = void 0;
 
 var _toolkit = require("@reduxjs/toolkit");
 
-var getGenres = function getGenres(state) {
+var _reselect = require("reselect");
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _toArray(arr) { return _arrayWithHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableRest(); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr && (typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]); if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+//SELECTORS
+var getGenresSelector = function getGenresSelector(state) {
   return state.games.genres;
 };
 
-exports.getGenres = getGenres;
+exports.getGenresSelector = getGenresSelector;
+
+var getGamesSelector = function getGamesSelector(state) {
+  return state.games.games;
+};
+
+exports.getGamesSelector = getGamesSelector;
+
+var gamesDetailListsByGameFirstLetterSelector = function gamesDetailListsByGameFirstLetterSelector(state) {
+  return state.games.gamesDetailListsByGameFirstLetter;
+};
+
+var getSortTypeSelector = function getSortTypeSelector(state) {
+  return state.games.sortType;
+};
+
+var getFilterTypesSelector = function getFilterTypesSelector(state) {
+  return state.games.filterTypes;
+};
+
+var gameFirstLetterSortBySortType = function gameFirstLetterSortBySortType(sortType) {
+  return function (firstLetter1, firstLetter2) {
+    var item1 = firstLetter1.toLowerCase();
+    var item2 = firstLetter2.toLowerCase();
+
+    if (sortType === "AZ") {
+      if (item1 < item2) return -1;
+      if (item1 > item2) return 1;
+      return 0;
+    }
+
+    if (sortType === "ZA") {
+      if (item1 > item2) return -1;
+      if (item1 < item2) return 1;
+      return 0;
+    }
+
+    return 0;
+  };
+};
+
+var getGamesBySortedAndFilteredSelector = (0, _reselect.createSelector)([gamesDetailListsByGameFirstLetterSelector, getSortTypeSelector, getFilterTypesSelector], function (gamesListByFirstLetter) {
+  var sortType = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "AZ";
+  var filterTypes = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : [];
+  var filtredGameList = Object.entries(gamesListByFirstLetter).reduce(function (acc, _ref) {
+    var _ref2 = _slicedToArray(_ref, 2),
+        key = _ref2[0],
+        _ref2$ = _toArray(_ref2[1]),
+        games = _ref2$.slice(0);
+
+    var filteredGames = games.filter(function (game) {
+      return filterTypes.every(function (filter) {
+        return game.genres.indexOf(filter) >= 0;
+      });
+    });
+
+    if (filteredGames.length) {
+      acc[key] = filteredGames;
+    }
+
+    return acc;
+  }, {});
+  var sortedGameList = Object.keys(filtredGameList).sort(gameFirstLetterSortBySortType(sortType)).reduce(function (acc, key) {
+    acc[key] = filtredGameList[key];
+    return acc;
+  }, {});
+  return sortedGameList;
+});
+exports.getGamesBySortedAndFilteredSelector = getGamesBySortedAndFilteredSelector;
 var gamesSlice = (0, _toolkit.createSlice)({
   name: "games",
   initialState: {
     games: [],
-    genres: []
+    genres: [],
+    gamesDetailListsByGameFirstLetter: {},
+    sortType: "AZ",
+    filterTypes: []
   },
   reducers: {
-    fetchGamesAndGenres: function fetchGamesAndGenres(state, _ref) {
-      var payload = _ref.payload;
+    setGamesAndGenres: function setGamesAndGenres(state, _ref3) {
+      var payload = _ref3.payload;
+      var combineList = payload.games.reduce(function (acc, game) {
+        var getFirstLetter = game.title.charAt(0).toUpperCase();
+        acc.firstLetterList = [].concat(_toConsumableArray(acc.firstLetterList), [getFirstLetter]);
+        acc.firstLetterList = _toConsumableArray(new Set(acc.firstLetterList));
+        acc.gamesDetailListsByGameFirstLetter[getFirstLetter] = [].concat(_toConsumableArray(acc.gamesDetailListsByGameFirstLetter[getFirstLetter] || []), [game]);
+        return acc;
+      }, {
+        firstLetterList: [],
+        gamesIdByGameFirstLetter: {},
+        gamesDetailListsByGameFirstLetter: {}
+      });
+      state.gamesDetailListsByGameFirstLetter = combineList.gamesDetailListsByGameFirstLetter;
       state.games = payload.games;
       state.genres = payload.genres;
+    },
+    toggleSortType: function toggleSortType(state, _ref4) {
+      var payload = _ref4.payload;
+      state.sortType = payload;
+    },
+    addFilterTypes: function addFilterTypes(state, _ref5) {
+      var payload = _ref5.payload;
+      var filterName = payload.filterName,
+          filterStatus = payload.filterStatus;
+      console.log(filterName, filterStatus);
+
+      if (filterStatus) {
+        state.filterTypes.push(filterName);
+      } else {
+        var filteredTypes = state.filterTypes.filter(function (item) {
+          return item !== filterName;
+        });
+        state.filterTypes = filteredTypes;
+      }
     }
   }
 });
 exports.gamesSlice = gamesSlice;
-var fetchGamesAndGenres = gamesSlice.actions.fetchGamesAndGenres;
-exports.fetchGamesAndGenres = fetchGamesAndGenres;
+var _gamesSlice$actions = gamesSlice.actions,
+    setGamesAndGenres = _gamesSlice$actions.setGamesAndGenres,
+    toggleSortType = _gamesSlice$actions.toggleSortType,
+    addFilterTypes = _gamesSlice$actions.addFilterTypes;
+exports.addFilterTypes = addFilterTypes;
+exports.toggleSortType = toggleSortType;
+exports.setGamesAndGenres = setGamesAndGenres;
 var _default = gamesSlice.reducer;
 exports.default = _default;
-},{"@reduxjs/toolkit":"node_modules/@reduxjs/toolkit/dist/redux-toolkit.esm.js"}],"src/components/main-layout/game-filter-container.js":[function(require,module,exports) {
+},{"@reduxjs/toolkit":"node_modules/@reduxjs/toolkit/dist/redux-toolkit.esm.js","reselect":"node_modules/reselect/es/index.js"}],"src/components/main-layout/game-filter-container.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37470,7 +37597,18 @@ var _reactRedux = require("react-redux");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var GameFilterContainer = function GameFilterContainer() {
-  var genres = (0, _reactRedux.useSelector)(_gamesReducer.getGenres);
+  var dispatch = (0, _reactRedux.useDispatch)();
+  var genres = (0, _reactRedux.useSelector)(_gamesReducer.getGenresSelector);
+
+  var addFilterToList = function addFilterToList(event) {
+    var filterName = event.target.value;
+    var filterStatus = event.target.checked;
+    dispatch((0, _gamesReducer.addFilterTypes)({
+      filterName: filterName,
+      filterStatus: filterStatus
+    }));
+  };
+
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "game-filter"
   }, /*#__PURE__*/_react.default.createElement("div", {
@@ -37481,7 +37619,7 @@ var GameFilterContainer = function GameFilterContainer() {
     className: "game-filter__main-block"
   }, /*#__PURE__*/_react.default.createElement("p", {
     className: "game-filter__filter-title"
-  }, "State"), /*#__PURE__*/_react.default.createElement(_downIconSvg.default, null), /*#__PURE__*/_react.default.createElement("div", {
+  }, "State"), /*#__PURE__*/_react.default.createElement("div", {
     className: "game-filter__checkbox-list"
   }, /*#__PURE__*/_react.default.createElement("label", {
     className: "game-filter__checkbox-item",
@@ -37497,15 +37635,18 @@ var GameFilterContainer = function GameFilterContainer() {
     className: "game-filter__main-block"
   }, /*#__PURE__*/_react.default.createElement("p", {
     className: "game-filter__filter-title"
-  }, "Genre Filters"), /*#__PURE__*/_react.default.createElement(_downIconSvg.default, null), genres.map(function (genre) {
+  }, "Genre Filters"), genres.map(function (genre) {
     return /*#__PURE__*/_react.default.createElement("div", {
-      className: "game-filter__checkbox-list"
+      className: "game-filter__checkbox-list",
+      key: genre.id
     }, /*#__PURE__*/_react.default.createElement("label", {
       className: "game-filter__checkbox-item",
       htmlFor: genre.id
     }, /*#__PURE__*/_react.default.createElement("input", {
       type: "checkbox",
-      id: genre.id
+      id: genre.id,
+      onChange: addFilterToList,
+      value: genre.name
     }), /*#__PURE__*/_react.default.createElement("span", {
       className: "game-filter__checkbox-checkmark"
     }), /*#__PURE__*/_react.default.createElement("p", {
@@ -37557,35 +37698,76 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
+var _reactRedux = require("react-redux");
+
 var _polygonIconSvg = _interopRequireDefault(require("../../svg-files/polygon-icon-svg"));
+
+var _gamesReducer = require("../../store/games-reducer");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _toArray(arr) { return _arrayWithHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableRest(); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr && (typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]); if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 var GameListContainer = function GameListContainer() {
+  var dispatch = (0, _reactRedux.useDispatch)();
+  var gameListByFirstLetter = (0, _reactRedux.useSelector)(_gamesReducer.getGamesBySortedAndFilteredSelector);
+
+  var handleSortType = function handleSortType(sortType) {
+    dispatch((0, _gamesReducer.toggleSortType)(sortType.target.value));
+  };
+
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "game-list"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "game-list__selectbox-block"
   }, /*#__PURE__*/_react.default.createElement("select", {
-    className: "game-list__selectbox-item"
+    className: "game-list__selectbox-item",
+    onChange: handleSortType
   }, /*#__PURE__*/_react.default.createElement("option", {
-    value: ""
+    value: "AZ"
   }, "Title A-Z"), /*#__PURE__*/_react.default.createElement("option", {
-    value: ""
-  }, "Title Z-A"))), /*#__PURE__*/_react.default.createElement("div", {
-    className: "game-card"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "game-card__card-icon"
-  }, /*#__PURE__*/_react.default.createElement(_polygonIconSvg.default, null), /*#__PURE__*/_react.default.createElement("div", {
-    className: "game-card__card-word"
-  }, "A")), /*#__PURE__*/_react.default.createElement("div", {
-    className: "game-card__card-detail"
-  }, "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.")));
+    value: "ZA"
+  }, "Title Z-A"))), Object.entries(gameListByFirstLetter).map(function (_ref) {
+    var _ref2 = _slicedToArray(_ref, 2),
+        key = _ref2[0],
+        _ref2$ = _toArray(_ref2[1]),
+        games = _ref2$.slice(0);
+
+    return /*#__PURE__*/_react.default.createElement("div", {
+      className: "game-card",
+      key: key
+    }, /*#__PURE__*/_react.default.createElement("div", {
+      className: "game-card__card-icon"
+    }, /*#__PURE__*/_react.default.createElement(_polygonIconSvg.default, null), /*#__PURE__*/_react.default.createElement("div", {
+      className: "game-card__card-word"
+    }, key)), /*#__PURE__*/_react.default.createElement("div", {
+      className: "game-card__card-gameList"
+    }, games.map(function (game) {
+      return /*#__PURE__*/_react.default.createElement("p", {
+        className: "game-card__card-gameName",
+        key: game.id
+      }, game.title);
+    })));
+  }));
 };
 
 var _default = GameListContainer;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","../../svg-files/polygon-icon-svg":"src/svg-files/polygon-icon-svg.js"}],"src/components/main-layout/main-layout.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-redux":"node_modules/react-redux/es/index.js","../../svg-files/polygon-icon-svg":"src/svg-files/polygon-icon-svg.js","../../store/games-reducer":"src/store/games-reducer.js"}],"src/components/main-layout/main-layout.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -39568,7 +39750,7 @@ function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && 
 var App = function App() {
   var dispatch = (0, _reactRedux.useDispatch)();
   (0, _react.useEffect)(function () {
-    dispatch((0, _gamesReducer.fetchGamesAndGenres)(_games.default));
+    dispatch((0, _gamesReducer.setGamesAndGenres)(_games.default));
   }, []);
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_header.default, null), /*#__PURE__*/_react.default.createElement(_searchBanner.default, null), /*#__PURE__*/_react.default.createElement(_mainLayout.default, null));
 };
@@ -39748,7 +39930,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52625" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62088" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
