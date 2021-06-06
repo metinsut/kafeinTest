@@ -23,8 +23,12 @@ header {
   display: grid;
   grid-auto-flow: column;
   padding: 0 2rem;
+  justify-content: center;
+  grid-gap: 4rem;
   a {
+    font-family: "roboto-medium";
     font-size: 1.6rem;
+    font-weight: bold;
     padding: 1rem;
     cursor: pointer;
   }

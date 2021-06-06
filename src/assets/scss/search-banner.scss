@@ -36,6 +36,7 @@
 
 .search-banner__wrapper {
   display: grid;
+  position: relative;
   grid-template-columns: auto 1fr auto;
   margin: 4rem 0 0 0;
   height: 56px;
@@ -72,10 +73,25 @@
   align-items: center;
   justify-items: center;
   color: var(--dark-grey);
+  cursor: pointer;
   .icon-clear {
     fill: var(--dark-grey);
   }
 }
 
 .search-anner__result {
+  display: grid;
+  background-color: var(--white);
+  padding: 2rem 5.6rem;
+  grid-gap: 1rem;
+  position: absolute;
+  top: 56px;
+  left: 0;
+  width: 100%;
+}
+
+.search-anner__result-text {
+  font-size: 2rem;
+  color: var(--dark-grey);
+  cursor: pointer;
 }

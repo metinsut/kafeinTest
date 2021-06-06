@@ -107,15 +107,6 @@
       "coverImage": "https://steamcdn-a.akamaihd.net/steam/apps/1050000/header.jpg?t=1573066046"
     },
     {
-      "id": 12,
-      "title": "7 Days to Die",
-      "genres": ["Action", "Adventure", "Indie"],
-      "publisher": "The Fun Pimps Entertainment LLC",
-      "description": "7 Days to Die is an open-world game that is a unique combination of first person shooter, survival horror, tower defense, and role-playing games. Play the definitive zombie survival sandbox RPG that came first. Navezgane awaits!",
-      "developer": "The Fun Pimps",
-      "coverImage": "https://steamcdn-a.akamaihd.net/steam/apps/251570/header.jpg?t=1579879756"
-    },
-    {
       "id": 13,
       "title": "Battlefleet Gothic: Armada 2",
       "genres": ["Strategy"],

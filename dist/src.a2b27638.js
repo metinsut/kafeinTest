@@ -33122,7 +33122,7 @@ module.exports = "/logo.e3b122bc.png";
 module.exports = "/logo@2x.39151842.png";
 },{}],"src/assets/images/logo/logo@3x.png":[function(require,module,exports) {
 module.exports = "/logo@3x.289d1736.png";
-},{}],"src/components/header.js":[function(require,module,exports) {
+},{}],"src/components/header/header.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -33132,11 +33132,11 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _logo = _interopRequireDefault(require("../assets/images/logo/logo.png"));
+var _logo = _interopRequireDefault(require("../../assets/images/logo/logo.png"));
 
-var _logo2x = _interopRequireDefault(require("../assets/images/logo/logo@2x.png"));
+var _logo2x = _interopRequireDefault(require("../../assets/images/logo/logo@2x.png"));
 
-var _logo3x = _interopRequireDefault(require("../assets/images/logo/logo@3x.png"));
+var _logo3x = _interopRequireDefault(require("../../assets/images/logo/logo@3x.png"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -33161,7 +33161,7 @@ var Header = function Header() {
 
 var _default = Header;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","../assets/images/logo/logo.png":"src/assets/images/logo/logo.png","../assets/images/logo/logo@2x.png":"src/assets/images/logo/logo@2x.png","../assets/images/logo/logo@3x.png":"src/assets/images/logo/logo@3x.png"}],"src/assets/images/search-bg/search-bg.png":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../../assets/images/logo/logo.png":"src/assets/images/logo/logo.png","../../assets/images/logo/logo@2x.png":"src/assets/images/logo/logo@2x.png","../../assets/images/logo/logo@3x.png":"src/assets/images/logo/logo@3x.png"}],"src/assets/images/search-bg/search-bg.png":[function(require,module,exports) {
 module.exports = "/search-bg.25773ca2.png";
 },{}],"src/svg-files/search-icon-svg.js":[function(require,module,exports) {
 "use strict";
@@ -33229,99 +33229,7 @@ var IconSearch = function IconSearch() {
 
 var _default = IconSearch;
 exports.default = _default;
-},{"react":"node_modules/react/index.js"}],"src/components/search-banner/search-input.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-var _searchIconSvg = _interopRequireDefault(require("../../svg-files/search-icon-svg"));
-
-var _clearIconSvg = _interopRequireDefault(require("../../svg-files/clear-icon-svg"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var SearchInput = function SearchInput() {
-  return /*#__PURE__*/_react.default.createElement("div", {
-    className: "search-banner__wrapper"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "search-banner__searc-icon"
-  }, /*#__PURE__*/_react.default.createElement(_searchIconSvg.default, null)), /*#__PURE__*/_react.default.createElement("input", {
-    className: "search-banner__input",
-    name: "search",
-    placeholder: "Search Games"
-  }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "search-banner__clear-icon"
-  }, /*#__PURE__*/_react.default.createElement(_clearIconSvg.default, null)), /*#__PURE__*/_react.default.createElement("div", {
-    className: "search-anner__result"
-  }));
-};
-
-var _default = SearchInput;
-exports.default = _default;
-},{"react":"node_modules/react/index.js","../../svg-files/search-icon-svg":"src/svg-files/search-icon-svg.js","../../svg-files/clear-icon-svg":"src/svg-files/clear-icon-svg.js"}],"src/components/search-banner/search-banner.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-var _searchBg = _interopRequireDefault(require("../../assets/images/search-bg/search-bg.png"));
-
-var _searchInput = _interopRequireDefault(require("./search-input"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var SearchBanner = function SearchBanner() {
-  return /*#__PURE__*/_react.default.createElement("div", {
-    className: "search-banner"
-  }, /*#__PURE__*/_react.default.createElement("img", {
-    className: "search-banner__image",
-    src: _searchBg.default,
-    alt: "search-bg"
-  }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "search-banner__body"
-  }, /*#__PURE__*/_react.default.createElement("h1", {
-    className: "search-banner__title"
-  }, "Lorem ipsum dolor sit amet consectetur"), /*#__PURE__*/_react.default.createElement("p", {
-    className: "search-banner__description"
-  }, "With the Cloud Gaming, you can join, play, and share games online with anyone in the world. Play any game on any device!"), /*#__PURE__*/_react.default.createElement(_searchInput.default, null)));
-};
-
-var _default = SearchBanner;
-exports.default = _default;
-},{"react":"node_modules/react/index.js","../../assets/images/search-bg/search-bg.png":"src/assets/images/search-bg/search-bg.png","./search-input":"src/components/search-banner/search-input.js"}],"src/assets/images/arrow/icon-mask.png":[function(require,module,exports) {
-module.exports = "/icon-mask.87133543.png";
-},{}],"src/svg-files/down-icon-svg.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-var _iconMask = _interopRequireDefault(require("../assets/images/arrow/icon-mask.png"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var IconDown = function IconDown() {
-  return /*#__PURE__*/_react.default.createElement("img", {
-    src: _iconMask.default
-  });
-};
-
-var _default = IconDown;
-exports.default = _default;
-},{"react":"node_modules/react/index.js","../assets/images/arrow/icon-mask.png":"src/assets/images/arrow/icon-mask.png"}],"node_modules/immer/dist/immer.esm.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js"}],"node_modules/immer/dist/immer.esm.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37418,7 +37326,7 @@ function isAsyncThunkAction() {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.getGamesBySortedAndFilteredSelector = exports.getGamesSelector = exports.getGenresSelector = exports.addFilterTypes = exports.toggleSortType = exports.setGamesAndGenres = exports.gamesSlice = void 0;
+exports.default = exports.searchedGameTitles = exports.getGamesBySortFilterSearchSelector = exports.getGamesSelector = exports.getGenresSelector = exports.addSearchLetters = exports.addFilterTypes = exports.toggleSortType = exports.setGamesAndGenres = exports.gamesSlice = void 0;
 
 var _toolkit = require("@reduxjs/toolkit");
 
@@ -37471,6 +37379,10 @@ var getFilterTypesSelector = function getFilterTypesSelector(state) {
   return state.games.filterTypes;
 };
 
+var getSearchLetterSelector = function getSearchLetterSelector(state) {
+  return state.games.searchLetters;
+};
+
 var gameFirstLetterSortBySortType = function gameFirstLetterSortBySortType(sortType) {
   return function (firstLetter1, firstLetter2) {
     var item1 = firstLetter1.toLowerCase();
@@ -37492,9 +37404,10 @@ var gameFirstLetterSortBySortType = function gameFirstLetterSortBySortType(sortT
   };
 };
 
-var getGamesBySortedAndFilteredSelector = (0, _reselect.createSelector)([gamesDetailListsByGameFirstLetterSelector, getSortTypeSelector, getFilterTypesSelector], function (gamesListByFirstLetter) {
+var getGamesBySortFilterSearchSelector = (0, _reselect.createSelector)([gamesDetailListsByGameFirstLetterSelector, getSortTypeSelector, getFilterTypesSelector, getSearchLetterSelector], function (gamesListByFirstLetter) {
   var sortType = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "AZ";
   var filterTypes = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : [];
+  var searchLetters = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : "";
   var filtredGameList = Object.entries(gamesListByFirstLetter).reduce(function (acc, _ref) {
     var _ref2 = _slicedToArray(_ref, 2),
         key = _ref2[0],
@@ -37513,13 +37426,43 @@ var getGamesBySortedAndFilteredSelector = (0, _reselect.createSelector)([gamesDe
 
     return acc;
   }, {});
-  var sortedGameList = Object.keys(filtredGameList).sort(gameFirstLetterSortBySortType(sortType)).reduce(function (acc, key) {
-    acc[key] = filtredGameList[key];
+  var searchedWordsList = Object.entries(filtredGameList).reduce(function (acc, _ref3) {
+    var _ref4 = _slicedToArray(_ref3, 2),
+        key = _ref4[0],
+        _ref4$ = _toArray(_ref4[1]),
+        games = _ref4$.slice(0);
+
+    var searchedGames = games.filter(function (game) {
+      return game.title.toLowerCase().includes(searchLetters.toLowerCase());
+    });
+
+    if (searchedGames.length > 0) {
+      acc[key] = searchedGames;
+    }
+
+    return acc;
+  }, {});
+  var sortedGameList = Object.keys(searchedWordsList).sort(gameFirstLetterSortBySortType(sortType)).reduce(function (acc, key) {
+    acc[key] = searchedWordsList[key];
     return acc;
   }, {});
   return sortedGameList;
 });
-exports.getGamesBySortedAndFilteredSelector = getGamesBySortedAndFilteredSelector;
+exports.getGamesBySortFilterSearchSelector = getGamesBySortFilterSearchSelector;
+var searchedGameTitles = (0, _reselect.createSelector)([getGamesBySortFilterSearchSelector, getSearchLetterSelector], function (gamesList) {
+  var searchLetters = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "";
+  var size = 4;
+  var searchedGameTitles = [];
+
+  if (searchLetters) {
+    searchedGameTitles = Object.values(gamesList).flat().slice(0, size).map(function (game) {
+      return game.title;
+    });
+  }
+
+  return searchedGameTitles;
+});
+exports.searchedGameTitles = searchedGameTitles;
 var gamesSlice = (0, _toolkit.createSlice)({
   name: "games",
   initialState: {
@@ -37527,11 +37470,12 @@ var gamesSlice = (0, _toolkit.createSlice)({
     genres: [],
     gamesDetailListsByGameFirstLetter: {},
     sortType: "AZ",
-    filterTypes: []
+    filterTypes: [],
+    searchLetters: ""
   },
   reducers: {
-    setGamesAndGenres: function setGamesAndGenres(state, _ref3) {
-      var payload = _ref3.payload;
+    setGamesAndGenres: function setGamesAndGenres(state, _ref5) {
+      var payload = _ref5.payload;
       var combineList = payload.games.reduce(function (acc, game) {
         var getFirstLetter = game.title.charAt(0).toUpperCase();
         acc.firstLetterList = [].concat(_toConsumableArray(acc.firstLetterList), [getFirstLetter]);
@@ -37547,15 +37491,14 @@ var gamesSlice = (0, _toolkit.createSlice)({
       state.games = payload.games;
       state.genres = payload.genres;
     },
-    toggleSortType: function toggleSortType(state, _ref4) {
-      var payload = _ref4.payload;
+    toggleSortType: function toggleSortType(state, _ref6) {
+      var payload = _ref6.payload;
       state.sortType = payload;
     },
-    addFilterTypes: function addFilterTypes(state, _ref5) {
-      var payload = _ref5.payload;
+    addFilterTypes: function addFilterTypes(state, _ref7) {
+      var payload = _ref7.payload;
       var filterName = payload.filterName,
           filterStatus = payload.filterStatus;
-      console.log(filterName, filterStatus);
 
       if (filterStatus) {
         state.filterTypes.push(filterName);
@@ -37565,6 +37508,10 @@ var gamesSlice = (0, _toolkit.createSlice)({
         });
         state.filterTypes = filteredTypes;
       }
+    },
+    addSearchLetters: function addSearchLetters(state, _ref8) {
+      var payload = _ref8.payload;
+      state.searchLetters = payload;
     }
   }
 });
@@ -37572,13 +37519,136 @@ exports.gamesSlice = gamesSlice;
 var _gamesSlice$actions = gamesSlice.actions,
     setGamesAndGenres = _gamesSlice$actions.setGamesAndGenres,
     toggleSortType = _gamesSlice$actions.toggleSortType,
-    addFilterTypes = _gamesSlice$actions.addFilterTypes;
+    addFilterTypes = _gamesSlice$actions.addFilterTypes,
+    addSearchLetters = _gamesSlice$actions.addSearchLetters;
+exports.addSearchLetters = addSearchLetters;
 exports.addFilterTypes = addFilterTypes;
 exports.toggleSortType = toggleSortType;
 exports.setGamesAndGenres = setGamesAndGenres;
 var _default = gamesSlice.reducer;
 exports.default = _default;
-},{"@reduxjs/toolkit":"node_modules/@reduxjs/toolkit/dist/redux-toolkit.esm.js","reselect":"node_modules/reselect/es/index.js"}],"src/components/main-layout/game-filter-container.js":[function(require,module,exports) {
+},{"@reduxjs/toolkit":"node_modules/@reduxjs/toolkit/dist/redux-toolkit.esm.js","reselect":"node_modules/reselect/es/index.js"}],"src/components/search-banner/search-input.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _searchIconSvg = _interopRequireDefault(require("../../svg-files/search-icon-svg"));
+
+var _clearIconSvg = _interopRequireDefault(require("../../svg-files/clear-icon-svg"));
+
+var _reactRedux = require("react-redux");
+
+var _gamesReducer = require("../../store/games-reducer");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+var SearchInput = function SearchInput() {
+  var dispatch = (0, _reactRedux.useDispatch)();
+  var inputRef = (0, _react.useRef)();
+
+  var updateSearchLetter = function updateSearchLetter(event) {
+    dispatch((0, _gamesReducer.addSearchLetters)(event.target.value));
+  };
+
+  var clearSearchLetter = function clearSearchLetter() {
+    inputRef.current.value = "";
+    dispatch((0, _gamesReducer.addSearchLetters)(""));
+  };
+
+  var gameTitles = (0, _reactRedux.useSelector)(_gamesReducer.searchedGameTitles);
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: "search-banner__wrapper"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "search-banner__searc-icon"
+  }, /*#__PURE__*/_react.default.createElement(_searchIconSvg.default, null)), /*#__PURE__*/_react.default.createElement("input", {
+    className: "search-banner__input",
+    name: "search",
+    placeholder: "Search Games",
+    onChange: updateSearchLetter,
+    ref: inputRef
+  }), /*#__PURE__*/_react.default.createElement("div", {
+    className: "search-banner__clear-icon",
+    onClick: clearSearchLetter
+  }, /*#__PURE__*/_react.default.createElement(_clearIconSvg.default, null)), gameTitles.length > 0 && /*#__PURE__*/_react.default.createElement("div", {
+    className: "search-anner__result"
+  }, gameTitles.map(function (title, key) {
+    return /*#__PURE__*/_react.default.createElement("p", {
+      className: "search-anner__result-text",
+      key: key
+    }, title);
+  })));
+};
+
+var _default = SearchInput;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","../../svg-files/search-icon-svg":"src/svg-files/search-icon-svg.js","../../svg-files/clear-icon-svg":"src/svg-files/clear-icon-svg.js","react-redux":"node_modules/react-redux/es/index.js","../../store/games-reducer":"src/store/games-reducer.js"}],"src/components/search-banner/search-banner.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _searchBg = _interopRequireDefault(require("../../assets/images/search-bg/search-bg.png"));
+
+var _searchInput = _interopRequireDefault(require("./search-input"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var SearchBanner = function SearchBanner() {
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: "search-banner"
+  }, /*#__PURE__*/_react.default.createElement("img", {
+    className: "search-banner__image",
+    src: _searchBg.default,
+    alt: "search-bg"
+  }), /*#__PURE__*/_react.default.createElement("div", {
+    className: "search-banner__body"
+  }, /*#__PURE__*/_react.default.createElement("h1", {
+    className: "search-banner__title"
+  }, "Lorem ipsum dolor sit amet consectetur"), /*#__PURE__*/_react.default.createElement("p", {
+    className: "search-banner__description"
+  }, "With the Cloud Gaming, you can join, play, and share games online with anyone in the world. Play any game on any device!"), /*#__PURE__*/_react.default.createElement(_searchInput.default, null)));
+};
+
+var _default = SearchBanner;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","../../assets/images/search-bg/search-bg.png":"src/assets/images/search-bg/search-bg.png","./search-input":"src/components/search-banner/search-input.js"}],"src/assets/images/arrow/icon-mask.png":[function(require,module,exports) {
+module.exports = "/icon-mask.87133543.png";
+},{}],"src/svg-files/down-icon-svg.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _iconMask = _interopRequireDefault(require("../assets/images/arrow/icon-mask.png"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var IconDown = function IconDown() {
+  return /*#__PURE__*/_react.default.createElement("img", {
+    src: _iconMask.default
+  });
+};
+
+var _default = IconDown;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","../assets/images/arrow/icon-mask.png":"src/assets/images/arrow/icon-mask.png"}],"src/components/main-layout/game-filter-container.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37609,29 +37679,13 @@ var GameFilterContainer = function GameFilterContainer() {
     }));
   };
 
-  return /*#__PURE__*/_react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement("aside", {
     className: "game-filter"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "game-filter__title-block"
   }, /*#__PURE__*/_react.default.createElement("p", {
     className: "game-filter__title-text"
   }, "Browse Games")), /*#__PURE__*/_react.default.createElement("div", {
-    className: "game-filter__main-block"
-  }, /*#__PURE__*/_react.default.createElement("p", {
-    className: "game-filter__filter-title"
-  }, "State"), /*#__PURE__*/_react.default.createElement("div", {
-    className: "game-filter__checkbox-list"
-  }, /*#__PURE__*/_react.default.createElement("label", {
-    className: "game-filter__checkbox-item",
-    htmlFor: "item1"
-  }, /*#__PURE__*/_react.default.createElement("input", {
-    type: "checkbox",
-    id: "item1"
-  }), /*#__PURE__*/_react.default.createElement("span", {
-    className: "game-filter__checkbox-checkmark"
-  }), /*#__PURE__*/_react.default.createElement("p", {
-    className: "game-filter__checkbox-text"
-  }, "Avaiable")))), /*#__PURE__*/_react.default.createElement("div", {
     className: "game-filter__main-block"
   }, /*#__PURE__*/_react.default.createElement("p", {
     className: "game-filter__filter-title"
@@ -37724,13 +37778,13 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 var GameListContainer = function GameListContainer() {
   var dispatch = (0, _reactRedux.useDispatch)();
-  var gameListByFirstLetter = (0, _reactRedux.useSelector)(_gamesReducer.getGamesBySortedAndFilteredSelector);
+  var gameListByFirstLetter = (0, _reactRedux.useSelector)(_gamesReducer.getGamesBySortFilterSearchSelector);
 
   var handleSortType = function handleSortType(sortType) {
     dispatch((0, _gamesReducer.toggleSortType)(sortType.target.value));
   };
 
-  return /*#__PURE__*/_react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement("section", {
     className: "game-list"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "game-list__selectbox-block"
@@ -37747,7 +37801,7 @@ var GameListContainer = function GameListContainer() {
         _ref2$ = _toArray(_ref2[1]),
         games = _ref2$.slice(0);
 
-    return /*#__PURE__*/_react.default.createElement("div", {
+    return /*#__PURE__*/_react.default.createElement("article", {
       className: "game-card",
       key: key
     }, /*#__PURE__*/_react.default.createElement("div", {
@@ -37881,14 +37935,6 @@ module.exports = {
     "description": "Bear With Me: The Lost Robots is an all new prequel chapter featuring Amber&#x2019;s brother Flint and the callous detective Ted E. Bear. Take to the gritty and bustling undergrounds of Paper City, discovering new characters and rich lore leading up to the events of the first 3 episodes of Bear With Me.",
     "developer": "Exordium Games",
     "coverImage": "https://steamcdn-a.akamaihd.net/steam/apps/1050000/header.jpg?t=1573066046"
-  }, {
-    "id": 12,
-    "title": "7 Days to Die",
-    "genres": ["Action", "Adventure", "Indie"],
-    "publisher": "The Fun Pimps Entertainment LLC",
-    "description": "7 Days to Die is an open-world game that is a unique combination of first person shooter, survival horror, tower defense, and role-playing games. Play the definitive zombie survival sandbox RPG that came first. Navezgane awaits!",
-    "developer": "The Fun Pimps",
-    "coverImage": "https://steamcdn-a.akamaihd.net/steam/apps/251570/header.jpg?t=1579879756"
   }, {
     "id": 13,
     "title": "Battlefleet Gothic: Armada 2",
@@ -39719,7 +39765,195 @@ module.exports = {
     "name": "Family"
   }]
 };
-},{}],"src/app.js":[function(require,module,exports) {
+},{}],"src/svg-files/facebook-icon-svg.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var IconFacebook = function IconFacebook() {
+  return /*#__PURE__*/_react.default.createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "8",
+    height: "16",
+    viewBox: "0 0 8 16"
+  }, /*#__PURE__*/_react.default.createElement("g", {
+    fill: "none",
+    fillRule: "evenodd"
+  }, /*#__PURE__*/_react.default.createElement("g", {
+    fill: "#1E1E1E"
+  }, /*#__PURE__*/_react.default.createElement("g", null, /*#__PURE__*/_react.default.createElement("g", null, /*#__PURE__*/_react.default.createElement("g", null, /*#__PURE__*/_react.default.createElement("path", {
+    d: "M2 5.333H0V8h2v8h3.333V8h2.428L8 5.333H5.333V4.222c0-.637.128-.889.744-.889H8V0H5.461C3.064 0 2 1.055 2 3.077v2.256z",
+    transform: "translate(-933 -2034) translate(0 1972) translate(933 24) translate(0 38)"
+  })))))));
+};
+
+var _default = IconFacebook;
+exports.default = _default;
+},{"react":"node_modules/react/index.js"}],"src/svg-files/twitter-icon-svg.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var IconTwitter = function IconTwitter() {
+  return /*#__PURE__*/_react.default.createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "20",
+    height: "16",
+    viewBox: "0 0 20 16"
+  }, /*#__PURE__*/_react.default.createElement("defs", null, /*#__PURE__*/_react.default.createElement("filter", {
+    id: "ia1x8xccfa"
+  }, /*#__PURE__*/_react.default.createElement("feColorMatrix", {
+    in: "SourceGraphic",
+    values: "0 0 0 0 0.117647 0 0 0 0 0.117647 0 0 0 0 0.117647 0 0 0 1.000000 0"
+  }))), /*#__PURE__*/_react.default.createElement("g", {
+    fill: "none",
+    fillRule: "evenodd"
+  }, /*#__PURE__*/_react.default.createElement("g", null, /*#__PURE__*/_react.default.createElement("g", null, /*#__PURE__*/_react.default.createElement("g", {
+    filter: "url(#ia1x8xccfa)",
+    transform: "translate(-957 -2034) translate(0 1972) translate(933 24)"
+  }, /*#__PURE__*/_react.default.createElement("g", null, /*#__PURE__*/_react.default.createElement("path", {
+    fill: "#000",
+    fillRule: "nonzero",
+    d: "M19.2 2.046c-.706.313-1.466.524-2.262.62.813-.488 1.438-1.26 1.732-2.18-.761.452-1.604.78-2.502.956C15.45.677 14.426.198 13.293.198c-2.543 0-4.412 2.373-3.838 4.836C6.182 4.87 3.28 3.302 1.337.92.305 2.69.802 5.006 2.555 6.18 1.91 6.157 1.302 5.98.772 5.685.729 7.51 2.037 9.218 3.932 9.598c-.555.15-1.162.185-1.78.067.5 1.565 1.955 2.703 3.68 2.735C4.176 13.698 2.09 14.278 0 14.032c1.743 1.118 3.814 1.77 6.038 1.77 7.314 0 11.446-6.177 11.196-11.717.77-.556 1.438-1.25 1.966-2.04z",
+    transform: "translate(24 38)"
+  })))))));
+};
+
+var _default = IconTwitter;
+exports.default = _default;
+},{"react":"node_modules/react/index.js"}],"src/svg-files/instagram-icon-svg.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var IconInstagram = function IconInstagram() {
+  return /*#__PURE__*/_react.default.createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "16",
+    height: "16",
+    viewBox: "0 0 16 16"
+  }, /*#__PURE__*/_react.default.createElement("g", {
+    fill: "none",
+    fillRule: "evenodd"
+  }, /*#__PURE__*/_react.default.createElement("g", {
+    fill: "#1E1E1E"
+  }, /*#__PURE__*/_react.default.createElement("g", null, /*#__PURE__*/_react.default.createElement("g", null, /*#__PURE__*/_react.default.createElement("g", null, /*#__PURE__*/_react.default.createElement("path", {
+    d: "M8 1.442c2.136 0 2.39.008 3.233.047 2.168.098 3.181 1.127 3.28 3.279.038.843.046 1.097.046 3.233s-.008 2.389-.046 3.232c-.1 2.15-1.11 3.181-3.28 3.28-.844.038-1.096.046-3.233.046-2.136 0-2.39-.008-3.233-.046-2.173-.1-3.18-1.133-3.279-3.28-.039-.844-.047-1.096-.047-3.233 0-2.136.009-2.389.047-3.233.1-2.151 1.11-3.18 3.28-3.279C5.61 1.45 5.863 1.442 8 1.442zM8 0C5.827 0 5.555.01 4.702.048 1.797.181.182 1.793.049 4.701.009 5.555 0 5.827 0 8s.01 2.445.048 3.299c.133 2.905 1.745 4.52 4.653 4.653C5.555 15.991 5.827 16 8 16s2.445-.01 3.299-.048c2.902-.133 4.521-1.745 4.652-4.653.04-.854.049-1.126.049-3.299s-.01-2.445-.048-3.298c-.13-2.903-1.745-4.52-4.653-4.653C10.445.009 10.173 0 8 0zm0 3.892c-2.269 0-4.108 1.84-4.108 4.108 0 2.269 1.84 4.109 4.108 4.109 2.269 0 4.108-1.84 4.108-4.109S10.268 3.892 8 3.892zm0 6.775c-1.473 0-2.667-1.194-2.667-2.667 0-1.473 1.194-2.667 2.667-2.667 1.473 0 2.667 1.194 2.667 2.667 0 1.473-1.194 2.667-2.667 2.667zm4.27-7.897c-.53 0-.96.43-.96.96s.43.96.96.96.96-.43.96-.96-.43-.96-.96-.96z",
+    transform: "translate(-992 -2034) translate(0 1972) translate(933 24) translate(59 38)"
+  })))))));
+};
+
+var _default = IconInstagram;
+exports.default = _default;
+},{"react":"node_modules/react/index.js"}],"src/svg-files/youtube-icon-svg.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var IconYoutube = function IconYoutube() {
+  return /*#__PURE__*/_react.default.createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "14",
+    height: "16",
+    viewBox: "0 0 14 16"
+  }, /*#__PURE__*/_react.default.createElement("g", {
+    fill: "none",
+    fillRule: "evenodd"
+  }, /*#__PURE__*/_react.default.createElement("g", {
+    fill: "#1E1E1E"
+  }, /*#__PURE__*/_react.default.createElement("g", null, /*#__PURE__*/_react.default.createElement("g", null, /*#__PURE__*/_react.default.createElement("g", null, /*#__PURE__*/_react.default.createElement("path", {
+    d: "M1.768 0h.96l.659 2.468L3.997 0h.97l-1.11 3.67v2.505h-.954V3.67L1.768 0zm4.396 1.582c-.746 0-1.24.493-1.24 1.223v2.233c0 .803.419 1.22 1.24 1.22.681 0 1.217-.455 1.217-1.22V2.805c0-.712-.531-1.223-1.217-1.223zM6.518 5c0 .248-.127.43-.355.43-.234 0-.369-.19-.369-.43V2.88c0-.249.115-.433.353-.433.26 0 .371.179.371.434V5zm3.153-3.38v3.457c-.104.13-.334.342-.498.342-.181 0-.226-.124-.226-.307V1.62h-.846v3.807c0 .45.137.813.591.813.256 0 .612-.133.979-.569v.503h.846V1.62h-.846zm1.468 9.239c-.298 0-.36.21-.36.508v.44h.712v-.44c.001-.294-.061-.508-.352-.508zm-3.135.026c-.056.029-.111.073-.167.132v2.704c.066.07.13.121.192.152.131.067.323.072.412-.044.047-.062.07-.161.07-.3V11.29c0-.147-.028-.257-.086-.333-.098-.129-.28-.143-.421-.072zm3.218-3.463c-1.736-.118-7.377-.118-9.11 0C.234 7.55.013 8.683 0 11.667c.014 2.978.233 4.116 2.111 4.244 1.734.118 7.375.118 9.111 0 1.876-.128 2.097-1.262 2.111-4.244-.014-2.978-.233-4.117-2.111-4.245zm-8.216 7.124h-.909V9.519h-.94v-.853h2.788v.853h-.94v5.027h.001zm3.23 0H5.43v-.479c-.149.177-.303.312-.464.404-.435.249-1.031.243-1.031-.637v-3.625h.806v3.325c0 .175.042.292.214.292.158 0 .376-.202.474-.325V10.21h.807v4.337zm3.105-.899c0 .537-.2.954-.737.954-.295 0-.541-.108-.766-.388v.333h-.814v-5.88h.814v1.893c.182-.222.43-.405.717-.405.591 0 .787.5.787 1.087v2.406zm2.981-1.168h-1.543v.819c0 .325.028.607.352.607.341 0 .361-.23.361-.607v-.301h.83v.326c0 .835-.359 1.342-1.209 1.342-.77 0-1.164-.562-1.164-1.342v-1.948c0-.752.498-1.276 1.225-1.276.774 0 1.147.492 1.147 1.276v1.104h.001z",
+    transform: "translate(-1024 -2034) translate(0 1972) translate(933 24) translate(91 38)"
+  })))))));
+};
+
+var _default = IconYoutube;
+exports.default = _default;
+},{"react":"node_modules/react/index.js"}],"src/components/footer/footer.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _facebookIconSvg = _interopRequireDefault(require("../../svg-files/facebook-icon-svg"));
+
+var _twitterIconSvg = _interopRequireDefault(require("../../svg-files/twitter-icon-svg"));
+
+var _instagramIconSvg = _interopRequireDefault(require("../../svg-files/instagram-icon-svg"));
+
+var _youtubeIconSvg = _interopRequireDefault(require("../../svg-files/youtube-icon-svg"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Footer = function Footer() {
+  var menuNames = ["Games", "Memmership", "Download", "Contact Us", "Blog", "FAQs", "Service Status"];
+  return /*#__PURE__*/_react.default.createElement("footer", null, /*#__PURE__*/_react.default.createElement("div", {
+    className: "footer-body"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "footer-body__left-block"
+  }, menuNames.map(function (menu, key) {
+    return /*#__PURE__*/_react.default.createElement("p", {
+      className: "footer-body__menu-text",
+      key: key
+    }, menu);
+  })), /*#__PURE__*/_react.default.createElement("div", {
+    className: "footer-body__right-block"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "footer-body__social"
+  }, /*#__PURE__*/_react.default.createElement("p", {
+    className: "footer-body__title"
+  }, "Follow Us!"), /*#__PURE__*/_react.default.createElement("div", {
+    className: "footer-body__social-icons"
+  }, /*#__PURE__*/_react.default.createElement(_facebookIconSvg.default, null), /*#__PURE__*/_react.default.createElement(_twitterIconSvg.default, null), /*#__PURE__*/_react.default.createElement(_instagramIconSvg.default, null), /*#__PURE__*/_react.default.createElement(_youtubeIconSvg.default, null))), /*#__PURE__*/_react.default.createElement("div", {
+    className: "footer-body__language"
+  }, /*#__PURE__*/_react.default.createElement("p", {
+    className: "footer-body__title"
+  }, "Site Language"), /*#__PURE__*/_react.default.createElement("select", {
+    className: "footer-body__select"
+  }, /*#__PURE__*/_react.default.createElement("option", null, "English"), /*#__PURE__*/_react.default.createElement("option", null, "Turkish"))))), /*#__PURE__*/_react.default.createElement("div", {
+    className: "footer-bottom"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "footer-bottom__left-block"
+  }, /*#__PURE__*/_react.default.createElement("p", null, "Terms of Use"), /*#__PURE__*/_react.default.createElement("p", null, "Privacy Policy"), /*#__PURE__*/_react.default.createElement("p", null, "Cookies")), /*#__PURE__*/_react.default.createElement("div", {
+    className: "footer-bottom__right-block"
+  }, "T\xFCm Haklar\u0131 Sakl\u0131d\u0131r.")));
+};
+
+var _default = Footer;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","../../svg-files/facebook-icon-svg":"src/svg-files/facebook-icon-svg.js","../../svg-files/twitter-icon-svg":"src/svg-files/twitter-icon-svg.js","../../svg-files/instagram-icon-svg":"src/svg-files/instagram-icon-svg.js","../../svg-files/youtube-icon-svg":"src/svg-files/youtube-icon-svg.js"}],"src/app.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -39731,7 +39965,7 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _reactRedux = require("react-redux");
 
-var _header = _interopRequireDefault(require("./components/header"));
+var _header = _interopRequireDefault(require("./components/header/header"));
 
 var _searchBanner = _interopRequireDefault(require("./components/search-banner/search-banner"));
 
@@ -39740,6 +39974,8 @@ var _mainLayout = _interopRequireDefault(require("./components/main-layout/main-
 var _gamesReducer = require("./store/games-reducer");
 
 var _games = _interopRequireDefault(require("./json/games.json"));
+
+var _footer = _interopRequireDefault(require("./components/footer/footer"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -39752,12 +39988,12 @@ var App = function App() {
   (0, _react.useEffect)(function () {
     dispatch((0, _gamesReducer.setGamesAndGenres)(_games.default));
   }, []);
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_header.default, null), /*#__PURE__*/_react.default.createElement(_searchBanner.default, null), /*#__PURE__*/_react.default.createElement(_mainLayout.default, null));
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_header.default, null), /*#__PURE__*/_react.default.createElement(_searchBanner.default, null), /*#__PURE__*/_react.default.createElement(_mainLayout.default, null), /*#__PURE__*/_react.default.createElement(_footer.default, null));
 };
 
 var _default = App;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","react-redux":"node_modules/react-redux/es/index.js","./components/header":"src/components/header.js","./components/search-banner/search-banner":"src/components/search-banner/search-banner.js","./components/main-layout/main-layout":"src/components/main-layout/main-layout.js","./store/games-reducer":"src/store/games-reducer.js","./json/games.json":"src/json/games.json"}],"src/store/store.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-redux":"node_modules/react-redux/es/index.js","./components/header/header":"src/components/header/header.js","./components/search-banner/search-banner":"src/components/search-banner/search-banner.js","./components/main-layout/main-layout":"src/components/main-layout/main-layout.js","./store/games-reducer":"src/store/games-reducer.js","./json/games.json":"src/json/games.json","./components/footer/footer":"src/components/footer/footer.js"}],"src/store/store.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -39875,12 +40111,17 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/assets/scss/footer.scss":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
 },{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/assets/scss/index.scss":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./reset.scss":"src/assets/scss/reset.scss","./font.scss":"src/assets/scss/font.scss","./variables.scss":"src/assets/scss/variables.scss","./header.scss":"src/assets/scss/header.scss","./search-banner.scss":"src/assets/scss/search-banner.scss","./main-layout.scss":"src/assets/scss/main-layout.scss","_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/index.js":[function(require,module,exports) {
+},{"./reset.scss":"src/assets/scss/reset.scss","./font.scss":"src/assets/scss/font.scss","./variables.scss":"src/assets/scss/variables.scss","./header.scss":"src/assets/scss/header.scss","./search-banner.scss":"src/assets/scss/search-banner.scss","./main-layout.scss":"src/assets/scss/main-layout.scss","./footer.scss":"src/assets/scss/footer.scss","_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/index.js":[function(require,module,exports) {
 "use strict";
 
 require("regenerator-runtime/runtime");
@@ -39930,7 +40171,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62088" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60305" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

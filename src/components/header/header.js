@@ -1,7 +1,7 @@
 import React from "react";
-import image1x from "../assets/images/logo/logo.png";
-import image2x from "../assets/images/logo/logo@2x.png";
-import image3x from "../assets/images/logo/logo@3x.png";
+import image1x from "../../assets/images/logo/logo.png";
+import image2x from "../../assets/images/logo/logo@2x.png";
+import image3x from "../../assets/images/logo/logo@3x.png";
 
 const Header = () => {
   return (

@@ -12,20 +12,9 @@ const GameFilterContainer = () => {
     dispatch(addFilterTypes({ filterName, filterStatus }));
   };
   return (
-    <div className="game-filter">
+    <aside className="game-filter">
       <div className="game-filter__title-block">
         <p className="game-filter__title-text">Browse Games</p>
-      </div>
-      <div className="game-filter__main-block">
-        <p className="game-filter__filter-title">State</p>
-        {/*     <IconDown /> */}
-        <div className="game-filter__checkbox-list">
-          <label className="game-filter__checkbox-item" htmlFor="item1">
-            <input type="checkbox" id="item1" />
-            <span className="game-filter__checkbox-checkmark" />
-            <p className="game-filter__checkbox-text">Avaiable</p>
-          </label>
-        </div>
       </div>
       <div className="game-filter__main-block">
         <p className="game-filter__filter-title">Genre Filters</p>
@@ -45,7 +34,7 @@ const GameFilterContainer = () => {
           </div>
         ))}
       </div>
-    </div>
+    </aside>
   );
 };
 

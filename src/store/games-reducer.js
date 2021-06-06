@@ -8,6 +8,7 @@ const gamesDetailListsByGameFirstLetterSelector = (state) =>
   state.games.gamesDetailListsByGameFirstLetter;
 const getSortTypeSelector = (state) => state.games.sortType;
 const getFilterTypesSelector = (state) => state.games.filterTypes;
+const getSearchLetterSelector = (state) => state.games.searchLetters;
 
 const gameFirstLetterSortBySortType =
   (sortType) => (firstLetter1, firstLetter2) => {
@@ -26,13 +27,19 @@ const gameFirstLetterSortBySortType =
     return 0;
   };
 
-const getGamesBySortedAndFilteredSelector = createSelector(
+const getGamesBySortFilterSearchSelector = createSelector(
   [
     gamesDetailListsByGameFirstLetterSelector,
     getSortTypeSelector,
     getFilterTypesSelector,
+    getSearchLetterSelector,
   ],
-  (gamesListByFirstLetter, sortType = "AZ", filterTypes = []) => {
+  (
+    gamesListByFirstLetter,
+    sortType = "AZ",
+    filterTypes = [],
+    searchLetters = ""
+  ) => {
     const filtredGameList = Object.entries(gamesListByFirstLetter).reduce(
       (acc, [key, [...games]]) => {
         const filteredGames = games.filter((game) => {
@@ -48,13 +55,41 @@ const getGamesBySortedAndFilteredSelector = createSelector(
       {}
     );
 
-    const sortedGameList = Object.keys(filtredGameList)
+    const searchedWordsList = Object.entries(filtredGameList).reduce(
+      (acc, [key, [...games]]) => {
+        const searchedGames = games.filter((game) => {
+          return game.title.toLowerCase().includes(searchLetters.toLowerCase());
+        });
+        if (searchedGames.length > 0) {
+          acc[key] = searchedGames;
+        }
+        return acc;
+      },
+      {}
+    );
+    const sortedGameList = Object.keys(searchedWordsList)
       .sort(gameFirstLetterSortBySortType(sortType))
       .reduce((acc, key) => {
-        acc[key] = filtredGameList[key];
+        acc[key] = searchedWordsList[key];
         return acc;
       }, {});
     return sortedGameList;
+  }
+);
+
+const searchedGameTitles = createSelector(
+  [getGamesBySortFilterSearchSelector, getSearchLetterSelector],
+  (gamesList, searchLetters = "") => {
+    const size = 4;
+    let searchedGameTitles = [];
+    if (searchLetters) {
+      searchedGameTitles = Object.values(gamesList)
+        .flat()
+        .slice(0, size)
+        .map((game) => game.title);
+    }
+
+    return searchedGameTitles;
   }
 );
 
@@ -66,6 +101,7 @@ export const gamesSlice = createSlice({
     gamesDetailListsByGameFirstLetter: {},
     sortType: "AZ",
     filterTypes: [],
+    searchLetters: "",
   },
   reducers: {
     setGamesAndGenres: (state, { payload }) => {
@@ -96,7 +132,6 @@ export const gamesSlice = createSlice({
     },
     addFilterTypes: (state, { payload }) => {
       const { filterName, filterStatus } = payload;
-      console.log(filterName, filterStatus);
       if (filterStatus) {
         state.filterTypes.push(filterName);
       } else {
@@ -106,16 +141,24 @@ export const gamesSlice = createSlice({
         state.filterTypes = filteredTypes;
       }
     },
+    addSearchLetters: (state, { payload }) => {
+      state.searchLetters = payload;
+    },
   },
 });
 
-export const { setGamesAndGenres, toggleSortType, addFilterTypes } =
-  gamesSlice.actions;
+export const {
+  setGamesAndGenres,
+  toggleSortType,
+  addFilterTypes,
+  addSearchLetters,
+} = gamesSlice.actions;
 
 export {
   getGenresSelector,
   getGamesSelector,
-  getGamesBySortedAndFilteredSelector,
+  getGamesBySortFilterSearchSelector,
+  searchedGameTitles,
 };
 
 export default gamesSlice.reducer;
